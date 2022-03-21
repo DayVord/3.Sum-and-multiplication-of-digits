@@ -17,21 +17,9 @@ namespace Sum_and_multiplication_of_digits
 
                     for (int i = 0; i < numbersAmount; i++)
                     {
-                        for (int y = 0; ; y++)
-                        {
-                            if (Int32.TryParse(Console.ReadLine(), out numbers[i]))
-                            {
-                                Console.WriteLine();
-                                Console.Write($"Enter the {i + 1}st number:\t");
-                            }
-                            else
-                            {
-                                Console.ForegroundColor = ConsoleColor.Red;
-                                Console.Write("You had to enter a numeric value");
-                                Console.WriteLine();
-                                Console.ResetColor();
-                            }
-                        }
+                        Console.WriteLine();
+                        Console.Write($"Enter the {i + 1}st number:\t");
+                        numbers[i] = Convert.ToInt32(Console.ReadLine());
                     }
 
                     int sum = 0;
